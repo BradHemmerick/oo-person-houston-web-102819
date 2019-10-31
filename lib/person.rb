@@ -21,7 +21,15 @@ class Person
         end
     
     end
-    
+
+    def happy?
+        if @happiness > 7
+            return true
+        elsif @happiness < 7
+            return false
+        end
+    end
+
     def initialize(name,happiness=8)
         @name = name
         @bank_account = 25
