@@ -23,11 +23,39 @@ class Person
     end
 
     def happy?
+        puts "hello"
+        puts @happiness
         if @happiness > 7
             return true
-        elsif @happiness < 7
+            # ask josh why elsif failed
+        else
             return false
         end
+    end
+    def clean?
+        puts @hygiene
+        if @hygiene > 7
+            return true
+            # ask josh why elsif failed
+        else
+            return false
+        end
+    end
+
+    def get_paid(salary)
+        @bank_account = @bank_account + salary
+        return "all about the benjamins"
+    end
+
+
+    def take_bath
+        if @hygiene < 7 
+            @hygiene = @hygiene + 4
+        else
+            @hygiene = 10
+        end
+        return "♪ Rub-a-dub just relaxing in the tub ♫"
+        
     end
 
     def initialize(name,happiness=8)
